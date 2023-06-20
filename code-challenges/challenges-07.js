@@ -94,10 +94,11 @@ const cvFormatter = (arr) => {
   let newArr=[];
    for(let i=0; i < arr.length; i++)
    {
-    if (arr[i].yearsOfExperience > 1 && (arr[i].firstName !== null && arr[i].lastName !== null) )
+    if (arr[i].yearsOfExperience > 1 )
     {   
 
-       newArr.push({fullName: arr[i].firstName + " " + arr[i].lastName, tech:arr[i].tech});
+       let fullName= arr[i].firstName +( arr[i].lastName ? " " + arr[i].lastName : "");
+       newArr.push({fullName, tech:arr[i].tech});
     }
    }
    return newArr;
