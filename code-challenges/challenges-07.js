@@ -96,8 +96,13 @@ const cvFormatter = (arr) => {
    {
     if (arr[i].yearsOfExperience > 1 )
     {   
+<<<<<< exercise07
        let fullName= arr[i].firstName + (arr[i].lastName != null? " " + arr[i].lastName:"")
        newArr.push({fullName: fullName, tech:arr[i].tech});
+
+
+       
+
     }
    }
    return newArr;
